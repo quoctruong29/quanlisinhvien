@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>Login</h1>
+        <div id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter Username" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter Password" required />
+
+            <button id="login-btn">Login</button>
+        </div>
+        <p id="login-error" style="color: red; display: none;">Invalid username or password!</p>
+    </div>
+
+    <div id="main-app" style="display: none;">
+        <h1>Student Management System</h1>
+        <div id="form">
+            <h2>Add / Edit Student</h2>
+            <label for="student-id">Student ID:</label>
+            <input type="text" id="student-id" placeholder="Enter ID" />
+
+            <label for="student-name">Name:</label>
+            <input type="text" id="student-name" placeholder="Enter Name" />
+
+            <button id="add-btn">Add</button>
+            <button id="update-btn" style="display: none;">Update</button>
+        </div>
+
+        <h2>Student List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="student-table">
+                <!-- Dynamic rows -->
+            </tbody>
+        </table>
+
+        <button id="logout-btn">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
